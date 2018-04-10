@@ -1,0 +1,37 @@
+<view class="page_bg">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/bg4.png"></image>
+</view>
+<view class="parent">
+    <view class="main">
+        <view class="swiper">
+            <view class="robot">
+                <image src="http://p6v1wjzjz.bkt.clouddn.com/robot1.png" mode="widthFix"></image>
+                <image src="/img/tip.png" mode='widthFix' class="tip_img"></image>
+            </view>
+            <swiper duration="1000">
+                <block>
+                    <swiper-item>
+                        <view class="wrap_item">
+                             <view class="text">
+                                  <view class="phonogram">mu</view>
+                                  <view class="text_inf">木</view>
+                             </view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <view class="record">
+             <view class="record_img">
+                 <image src="/img/record.png"></image>
+                 <view class="circle circle1"></view>
+                 <view class="circle circle2"></view>
+                 <view class="circle circle3"></view>
+                 <view class="circle circle4"></view>
+                 <view class="circle circle5"></view>
+                 <view class="circle circle6"></view>
+             </view>
+        </view>
+    </view>
+</view>

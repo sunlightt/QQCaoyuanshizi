@@ -1,0 +1,18 @@
+<view class="page_bg">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/bg4.png"></image>
+</view>
+<view class="parent">
+    <view class="main">
+         <view class="star">
+              <image src="/img/stars.png" mode='widthFix'></image>
+         </view>
+         <view class="msg_text">
+              <view class="star_num">25个星星</view>
+              <text class="story_title">“汉字小霸王”</text>
+         </view>
+         <view class="more">
+              <button class="gift">星星礼物</button>
+              <button>学习更多汉字故事</button>
+         </view>
+    </view>
+</view>

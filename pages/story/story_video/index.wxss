@@ -1,0 +1,125 @@
+
+.parent{
+    padding-left:86rpx;
+    padding-top:132rpx;
+}
+
+.main .swiper{
+    position:relative;
+}
+.main .swiper .robot{
+    position:absolute;
+    left:50%;
+    top:-70rpx;
+    transform:translateX(-50%);
+}
+.main .swiper .robot image{
+    display:block;
+    width:100rpx;
+}
+.main .swiper swiper{
+    height:838rpx;
+    padding-bottom:10rpx;
+}
+.main .swiper swiper swiper-item {
+    padding-right:10rpx;
+    box-sizing:border-box;
+    
+}
+.main .swiper swiper swiper-item .wrap_item{
+    margin-left:40rpx;
+    border-radius:20rpx;
+    box-shadow:8rpx 8rpx 4rpx 4rpx #278d69;
+    overflow:hidden;
+}
+
+.main .swiper swiper  .end_card .wrap_item{
+    height:828rpx;
+    position:relative;
+}
+
+.main .swiper swiper  .end_card .wrap_item image{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.main .swiper swiper  .end_card .wrap_item .mark{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.4);
+}
+
+.main .swiper swiper  .end_card .wrap_item .button{
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+} 
+
+.main .swiper swiper  .end_card .wrap_item .button button{
+    width:60%;
+    font:34rpx/102rpx '微软雅黑';
+    color:#090700;
+    text-align:center;
+    background:#fcc600;
+    border-radius:50rpx;
+    border:none;
+    
+}
+.main .swiper swiper  .end_card .wrap_item .button .agin{
+    margin-bottom:54rpx;
+}
+
+.main .swiper swiper swiper-item:first-child .wrap_item{
+    margin-left:0;
+}
+
+.main .swiper swiper .top{
+    width:100%;
+    height:428rpx;
+}
+.main .swiper swiper .bottom{
+    width:100%;
+    height:400rpx;
+}
+.main .swiper swiper .top image , .swiper swiper .bottom image{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.swiper_text{
+    display:flex;
+    padding-left:350rpx;
+    position:relative;
+    margin-top:58rpx;
+}
+.swiper_text  .current_text{
+    display:inline-block;
+    font:74rpx '微软雅黑';
+    color:#000;
+    position:absolute;
+    left:243rpx;
+    top:0;
+}
+.swiper_text scroll-view{
+    width:100%;
+}
+.swiper_text .list{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+}
+
+.swiper_text .list .item_text{
+    display:inline-block;
+    font:50rpx/100rpx '微软雅黑';
+    color:#000;
+    margin:0 16rpx;
+
+}

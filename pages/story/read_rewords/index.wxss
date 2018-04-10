@@ -1,0 +1,61 @@
+.parent {
+    padding: 132rpx 45rpx 0;
+}
+
+.main .swiper {
+    position: relative;
+}
+
+.main .swiper .robot {
+    position: absolute;
+    left: 50%;
+    top: -70rpx;
+    transform: translateX(-50%);
+}
+
+.main .swiper .robot image {
+    display: block;
+    width: 100rpx;
+}
+
+.main .swiper swiper {
+    height: 838rpx;
+    padding-bottom: 10rpx;
+}
+
+.main .swiper swiper swiper-item {
+    padding-right: 10rpx;
+    box-sizing: border-box;
+}
+
+.main .swiper swiper swiper-item .wrap_item {
+    margin-left: 40rpx;
+    border-radius: 20rpx;
+    box-shadow: 8rpx 8rpx 4rpx 4rpx rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.main .swiper swiper  swiper-item .wrap_item {
+    position: relative;
+    padding:152rpx 42rpx;
+    background:#fff;
+}
+.main .swiper swiper  swiper-item .wrap_item .grid{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    border:2px solid #4e4e4e;
+}
+.main .swiper swiper  swiper-item .wrap_item .grid .grid_box{   
+    width:25%;
+    height:132rpx;
+    font:74rpx/132rpx '微软雅黑';
+    color:#000;
+    text-align:center;
+    box-sizing:border-box;
+    border-right:1rpx solid #a1a1a1;
+    border-bottom:1rpx solid #a1a1a1;
+}
+
+
+

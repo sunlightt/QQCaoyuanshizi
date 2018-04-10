@@ -1,0 +1,52 @@
+.parent {
+    padding: 132rpx 68rpx 0;
+}
+
+.main .star {
+    position: relative;
+    z-index: 9999;
+    padding-top: 90rpx;
+}
+
+.main .star image {
+    display: block;
+    width: 330rpx;
+    margin: 0 auto;
+}
+
+.main .msg_text {
+    position: relative;
+    z-index: 9999;
+}
+
+.main .msg_text .star_num{
+     font:24rpx/102rpx '微软雅黑';
+    color:#000;
+    text-align:center;
+}
+.main .msg_text .story_title{
+    display:block;
+    width:100%;
+    font:76rpx/104rpx '微软雅黑';
+    color:#000;
+    text-align:center;
+}
+
+.main .more {
+    padding-top: 150rpx;
+}
+
+.main .more button {
+    display: block;
+    width: 55%;
+    font: 36rpx/102rpx '微软雅黑';
+    color: #000;
+    padding: 0;
+    background: #8a87da;
+    border-radius: 70rpx;
+    box-shadow:2px 2px 6rpx 6rpx rgba(0, 0, 0, .3);
+}
+.main .more .gift{
+    background:#fcc600;
+    margin-bottom:32rpx;
+}

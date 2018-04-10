@@ -1,0 +1,63 @@
+<view class="page_bg">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/bg3.png"></image>
+</view>
+<view class="parent">
+    <view class="header_img">
+        <view class="img_wrap">
+            <image src="http://p6v1wjzjz.bkt.clouddn.com/sun.png" mode="widthFix"></image>
+            <text class="text_inf">{{title}}</text>
+        </view>
+    </view>
+    <view class="main">
+        <!-- <view class="line">
+            <image src="/img/line.png" mode="widthFix"></image>
+        </view> -->
+        <scroll-view scroll-y style="height:350px;">
+            <view class="list">
+                <view class="item" bindtap='story_video'>
+                    <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">字源故事</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <view class="star">
+                            <view class="star_wrap">
+                                <image src="/img/big_star.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item" bindtap='story_read'>
+                    <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">故事跟读</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <view class="star">
+                            <view class="star_wrap">
+                                <image src="/img/big_star.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item" bindtap='read_rewords_pass'>
+                    <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">读字闯关</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <view class="star">
+                            <view class="star_wrap">
+                                <image src="/img/big_star.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+
+</view>

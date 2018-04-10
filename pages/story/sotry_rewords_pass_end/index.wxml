@@ -1,0 +1,13 @@
+<view class="page_bg">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/bg4.png"></image>
+</view>
+<view class="parent">
+    <view class="main">
+         <view class="robot">
+              <image src="/img/sun_bg.png" mode='widthFix'></image>
+         </view>
+         <view class="more">
+              <button>学习更多汉字故事</button>
+         </view>
+    </view>
+</view>

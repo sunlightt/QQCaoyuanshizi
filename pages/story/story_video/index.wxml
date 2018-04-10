@@ -1,0 +1,69 @@
+<view class="page_bg">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/bg1.png"></image>
+</view>
+<view class="parent">
+    <view class="main">
+        <view class="swiper">
+            <view class="robot">
+                <image src="http://p6v1wjzjz.bkt.clouddn.com/robot1.png" mode="widthFix"></image>
+            </view>
+            <swiper duration="1000" next-margin="86rpx" bindchange="change_view">
+                <block wx:for="{{story_data}}">
+                    <swiper-item>
+                        <view class="wrap_item">
+                            <view class="top">
+                                <image src="{{item.top}}"></image>
+                            </view>
+                            <view class="bottom">
+                                <image src="{{item.bottom}}"></image>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block>
+                <!-- <block>
+                    <swiper-item>
+                        <view class="wrap_item">
+                            <view class="top">
+                                <image src="http://p6v1wjzjz.bkt.clouddn.com/pro_img1.png"></image>
+                            </view>
+                            <view class="bottom">
+                                <image src="http://p6v1wjzjz.bkt.clouddn.com/pro_img2.png"></image>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block> -->
+                <block>
+                    <swiper-item class="end_card">
+                        <view class="wrap_item">
+                            <image src="http://p6v1wjzjz.bkt.clouddn.com/card_bg.png"></image>
+                            <view class="mark">
+                                <view class="button">
+                                     <button class="agin">再学一遍</button>
+                                     <button class="go_reading" bindtap='read_story'>去跟读故事</button>
+                                </view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <view class="swiper_text">
+            <view class="current_text">
+                <text>{{current_text}}</text>
+            </view>
+            <scroll-view scroll-into-view="{{current_view}}" scroll-x  scroll-with-animation>
+                <view class="list">
+                    <view class="item_text" id="view{{index}}" wx:for="{{story_data}}">{{item.text}}</view>
+                    <!-- <view class="item_text" id="view0">休</view>
+                    <view class="item_text" id="view0">休</view>
+                    <view class="item_text" id="view0">休</view>
+                    <view class="item_text" id="view0">休</view>
+                    <view class="item_text" id="view0">休</view>
+                    <view class="item_text" id="view0">休</view>
+                    <view class="item_text" id="view0">休</view> -->
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

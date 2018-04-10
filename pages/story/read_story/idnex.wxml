@@ -1,0 +1,61 @@
+<view class="page_bg">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/bg1.png"></image>
+</view>
+<view class="parent">
+    <view class="main">
+        <view class="swiper">
+            <view class="robot">
+                <image src="http://p6v1wjzjz.bkt.clouddn.com/robot1.png" mode="widthFix"></image>
+            </view>
+            <swiper duration="1000">
+                <block>
+                    <swiper-item>
+                        <view class="wrap_item">
+                            <!-- <view class="top">
+                                <image src="/img/pro_img1.png"></image>
+                            </view>
+                            <view class="bottom">
+                                <image src="/img/pro_img2.png"></image>
+                            </view> -->
+                            <image src="http://p6v1wjzjz.bkt.clouddn.com/pro_img3.png"></image>
+                        </view>
+                    </swiper-item>
+                </block>
+                <block>
+                    <swiper-item class="end_card">
+                        <view class="wrap_item">
+                            <image src="http://p6v1wjzjz.bkt.clouddn.com/card_bg.png"></image>
+                            <view class="mark">
+                                <view class="button">
+                                     <button class="agin">再学一遍</button>
+                                     <button class="go_reading"  bindtap='read_story'>去跟读故事</button>
+                                </view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <view class="swiper_text">
+            <!-- <view class="current_text">
+                <text>这个故事说明很重要</text>
+            </view> -->
+            <view class="button">
+                 <button bindtap='read_rewords'>开始读字闯关</button>
+            </view>
+            <!-- <scroll-view>
+                <view class="list">
+                    <view class="item_text">休</view>
+                    <view class="item_text">休</view>
+                    <view class="item_text">休</view>
+                    <view class="item_text">休</view>
+                    <view class="item_text">休</view>
+                    <view class="item_text">休</view>
+                    <view class="item_text">休</view>
+                    <view class="item_text">休</view>
+                </view>
+            </scroll-view> -->
+        </view>
+    </view>
+</view>

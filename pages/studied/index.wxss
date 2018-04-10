@@ -1,0 +1,15 @@
+@import '../index/index.wxss';
+
+.float_robot {
+    width:50%;
+    position: fixed;
+    left:50%;
+    bottom: -66rpx;
+    z-index: 100;
+}
+
+.float_robot image {
+    display: block;
+    width: 102rpx;
+    margin:0 auto;
+}

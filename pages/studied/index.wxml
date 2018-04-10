@@ -1,0 +1,131 @@
+<view class="page_bg">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/bg5.png"></image>
+</view>
+<view class="float_robot">
+    <image src="http://p6v1wjzjz.bkt.clouddn.com/robot1.png" mode="widthFix"></image>
+</view>
+<view class="parent">
+    <!-- <view class="header">
+        <form bindsubmit='search'>
+            <view class="search_area">
+                <input name="search"></input>
+            </view>
+        </form>
+    </view> -->
+    <view class="robot">
+        <view class="robot_title_wrap">
+            <image src="http://p6v1wjzjz.bkt.clouddn.com/robot.png" mode="widthFix"></image>
+            <text>小朋友好厉害已经学习了\n6个故事汉子了</text>
+        </view>
+    </view>
+    <view class="main">
+        <view class="line">
+            <image src="/img/line.png" mode="widthFix"></image>
+        </view>
+        <scroll-view scroll-y style="height:732rpx;">
+            <view class="list">
+                <view class="item" bindtap='story_dir'>
+                    <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">汉字很有趣</text>
+                        <text class="subtitle">这是一个全新的世界</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <view class="free">
+                            <image src="/img/free.png"></image>
+                        </view>
+                        <!-- <view class="star" style="">
+                              <image src="/img/star.png"></image>
+                         </view>
+                         <view class="un_complete">
+                              <image src="/img/status.png"></image>
+                         </view> -->
+                    </view>
+                </view>
+                <view class="item" bindtap='story_dir'>
+                    <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">1-晶晶找太阳</text>
+                        <text class="subtitle">日-目-眼-阳</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <!-- <view class="free">
+                              <image src="/img/free.png"></image>
+                         </view> -->
+                        <view class="star">
+                            <!-- <image src="/img/status.png" mode='widthFix'></image> -->
+                            <view class="star_wrap">
+                                <image src="/img/star2.png"></image>
+                            </view>
+                        </view>
+                        <!-- <view class="un_complete">
+                              <image src="/img/status.png"></image>
+                         </view> -->
+                    </view>
+                </view>
+                <view class="item" bindtap='story_dir'>
+                    <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">2-动物乐园</text>
+                        <text class="subtitle">猫-狗-猴-熊</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <!-- <view class="free">
+                              <image src="/img/free.png"></image>
+                         </view> -->
+                        <!-- <view class="star" style="">
+                              <image src="/img/star.png"></image>
+                         </view> -->
+                        <view class="un_complete">
+                            <image src="/img/status.png" mode='widthFix'></image>
+                        </view>
+                    </view>
+                </view>
+                <view class="item" bindtap='story_dir'>
+                    <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">2-动物乐园</text>
+                        <text class="subtitle">猫-狗-猴-熊</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <view class="free">
+                            <image src="/img/free.png"></image>
+                        </view>
+                        <!-- <view class="star" style="">
+                              <image src="/img/star.png"></image>
+                         </view>
+                         <view class="un_complete">
+                              <image src="/img/status.png"></image>
+                         </view> -->
+                    </view>
+                </view>
+                <view class="item last_item" bindtap='story_dir'>
+                    <!-- <image src="/img/img1.png" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">汉字很有趣</text>
+                        <text class="subtitle">这是一个全新的世界</text>
+                    </view> -->
+                    <!--徽标  -->
+                    <!-- <view class="tip_icon">
+                         <view class="free">
+                              <image src="/img/free.png"></image>
+                         </view> -->
+                    <!-- <view class="star" style="">
+                              <image src="/img/star.png"></image>
+                         </view>
+                         <view class="un_complete">
+                              <image src="/img/status.png"></image>
+                         </view> -->
+                    <!-- </view> -->
+                    <view class="more" bindtap='story_dir'>
+                        <text class="more_inf">更多故事马上发生</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

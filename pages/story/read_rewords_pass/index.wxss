@@ -1,0 +1,114 @@
+.parent {
+    padding: 132rpx 68rpx 0;
+}
+
+.main .swiper {
+    position: relative;
+}
+
+.main .swiper .robot {
+    position: absolute;
+    left: 50%;
+    top: -70rpx;
+    transform: translateX(-50%);
+}
+
+.main .swiper .robot image {
+    display: block;
+    width: 100rpx;
+}
+.main .swiper .robot .tip_img{
+    width:120rpx;
+    position:absolute;
+    left:100%;
+    top:-30rpx;
+}
+
+.main .swiper swiper {
+    height: 838rpx;
+    padding-bottom: 10rpx;
+}
+
+.main .swiper swiper swiper-item {
+    padding-right: 10rpx;
+    box-sizing: border-box;
+}
+
+.main .swiper swiper swiper-item .wrap_item {
+    border-radius: 20rpx;
+    box-shadow: 8rpx 8rpx 4rpx 4rpx rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    padding: 50rpx 42rpx 108rpx;
+    background: #fff;
+}
+
+.main .swiper swiper  swiper-item .wrap_item  .phonogram {
+    font: 60rpx/120rpx '微软雅黑';
+    color: #020202;
+    text-align: center;
+}
+
+.main .swiper swiper  swiper-item .wrap_item  .text_inf {
+    font: 272rpx/340rpx '微软雅黑';
+    color: #020202;
+    text-align: center;
+}
+
+.record {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.record .record_img {
+    width: 186rpx;
+    height: 186rpx;
+    margin: 0 auto 58rpx;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+}
+
+.record .record_img image {
+    display: block;
+    width: 47rpx;
+    height: 70rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.record .record_img .circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.record .record_img .circle1 {
+    width: 236rpx;
+    height: 236rpx;
+    border: 1px solid #fff;
+}
+.record .record_img .circle2 {
+    width: 322rpx;
+    height: 322rpx;
+    border: 1px solid #fff;
+}
+.record .record_img .circle3{
+    width: 416rpx;
+    height: 416rpx;
+    border: 1px solid rgba(255,255,255,.4);
+}
+.record .record_img .circle4{
+    width: 530rpx;
+    height: 530rpx;
+    border: 1px solid rgba(255,255,255,.3);
+}
+
