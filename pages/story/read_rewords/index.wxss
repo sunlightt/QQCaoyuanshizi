@@ -19,7 +19,7 @@
 }
 
 .main .swiper swiper {
-    height: 838rpx;
+    height: 572rpx;
     padding-bottom: 10rpx;
 }
 
@@ -58,4 +58,18 @@
 }
 
 
+.btn{
+    width:100%;
+    margin-top:100rpx;
+}
 
+.btn  .go{
+    display:block;
+    width:50%;
+    font:34rpx/102rpx '微软雅黑';
+    color:#000;
+    margin:0 auto;
+    background:#fcc600;
+    border-radius:50rpx;
+    border:none;
+}

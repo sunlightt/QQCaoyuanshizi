@@ -13,3 +13,7 @@
     width: 102rpx;
     margin:0 auto;
 }
+
+.main .list .tip{
+    background:#fff;
+}

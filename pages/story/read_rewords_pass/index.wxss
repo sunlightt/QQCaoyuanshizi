@@ -47,12 +47,30 @@
     font: 60rpx/120rpx '微软雅黑';
     color: #020202;
     text-align: center;
+    position:relative;
+    z-index:9999;
 }
 
 .main .swiper swiper  swiper-item .wrap_item  .text_inf {
     font: 272rpx/340rpx '微软雅黑';
     color: #020202;
     text-align: center;
+    position:relative;
+    z-index:9999;
+} 
+
+.main .swiper swiper  swiper-item .wrap_item .dashed{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.main .swiper swiper  swiper-item .wrap_item .dashed image{
+    display:block;
+    width:100%;
+    height:100%;
 }
 
 .record {
@@ -87,28 +105,62 @@
     border-radius: 50%;
     z-index: 9999;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;  
+    /* transform: translate(-50%, -50%); */
+    transform-origin:center;
+    transition:none;
+}
+
+.record .start_record{
+    
+    background:#eee;
+}
+
+.record .start_record  view{
+      animation:scale 1s ease infinite normal;  
 }
 
 .record .record_img .circle1 {
     width: 236rpx;
     height: 236rpx;
     border: 1px solid #fff;
+    margin-top:-118rpx;
+    margin-left:-118rpx;
 }
 .record .record_img .circle2 {
     width: 322rpx;
     height: 322rpx;
     border: 1px solid #fff;
+    margin-top:-161rpx;
+    margin-left:-161rpx;
 }
 .record .record_img .circle3{
     width: 416rpx;
     height: 416rpx;
     border: 1px solid rgba(255,255,255,.4);
+    margin-top:-208rpx;
+    margin-left:-208rpx;
 }
 .record .record_img .circle4{
     width: 530rpx;
     height: 530rpx;
     border: 1px solid rgba(255,255,255,.3);
+    margin-top:-265rpx;
+    margin-left:-265rpx;
+}
+
+
+@keyframes scale {
+
+    from{
+
+        transform:scale(.5);
+
+    }
+    to{
+         
+        transform:scale(1.1);
+
+    }
 }
 

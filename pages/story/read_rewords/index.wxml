@@ -12,14 +12,14 @@
                     <swiper-item>
                         <view class="wrap_item">
                              <view class="grid">
+                                   <view class="grid_box" wx:for="{{words_data}}"  data-words="{{item.words}}" data-phonogram="{{item.pinyin}}">{{item.words}}</view>
+                                   <!-- <view class="grid_box">木</view>
                                    <view class="grid_box">木</view>
                                    <view class="grid_box">木</view>
                                    <view class="grid_box">木</view>
                                    <view class="grid_box">木</view>
                                    <view class="grid_box">木</view>
-                                   <view class="grid_box">木</view>
-                                   <view class="grid_box">木</view>
-                                   <view class="grid_box">木</view>
+                                   <view class="grid_box">木</view> -->
                              </view>
                         </view>
                     </swiper-item>
@@ -38,6 +38,10 @@
                     </swiper-item>
                 </block> -->
             </swiper>
+        </view>
+
+        <view class="btn">
+            <button class="go" bindtap='read_words'>开始闯关</button>
         </view>
 
         <!-- <view class="swiper_text"> --> 

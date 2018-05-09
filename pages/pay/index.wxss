@@ -1,0 +1,45 @@
+
+@import '../index/index.wxss';
+
+.parent .robot .robot_title_wrap text{
+    color:#fff;
+}
+
+.list{
+    padding-top:20rpx;
+}
+.list , .main .list .item{
+    background:#fff;
+}
+.main .list .item{
+    padding:40rpx 10rpx 40rpx 178rpx;
+}
+.main .list .item .msg .title , .main .list .item .msg .subtitle{
+    color:#dd8b67;
+}
+
+
+.total {
+    padding-right:32rpx;
+    border-top:18rpx solid #f0f0f0;
+}
+.total text{
+
+    display:block;
+    width:100%;
+    font:30rpx/112rpx '微软雅黑';
+    color:#161616;
+    text-align:right;
+
+}
+
+.pay{
+    font:28rpx/94rpx '微软雅黑';
+    color:#000;
+    text-align:center;
+    background:#fff;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+}

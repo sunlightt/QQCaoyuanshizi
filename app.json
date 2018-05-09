@@ -2,26 +2,29 @@
   "pages":[
 
     "pages/index/index",
+    "pages/pay/index",
+    "pages/studied/index",
     "pages/story/dir/index",
     "pages/story/read_story/idnex",
     "pages/story/story_video/index",
     "pages/story/read_rewords/index",
     "pages/story/story_achievement/index", 
-    "pages/story/read_rewords_pass/index",
-    "pages/story/sotry_rewords_pass_end/index",
-    "pages/studied/index"
+    "pages/story/read_rewords_pass/index", 
+    "pages/story/sotry_rewords_pass_end/index"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#4d9ad6",
-    "navigationBarTitleText": "青青草原",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "方宝和圆宝",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [
         {
             "pagePath": "pages/index/index",
-            "text": "发布"
+            "text": "字源世界"
         },
         {
             "pagePath": "pages/studied/index",

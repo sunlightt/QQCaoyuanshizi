@@ -6,7 +6,7 @@
          <view class="robot">
               <image src="/img/sun_bg.png" mode='widthFix'></image>
          </view>
-         <view class="more">
+         <view class="more" bindtap='study_more_story'>
               <button>学习更多汉字故事</button>
          </view>
     </view>

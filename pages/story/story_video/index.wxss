@@ -1,6 +1,6 @@
 
 .parent{
-    padding-left:86rpx;
+    /* padding-left:86rpx; */
     padding-top:132rpx;
 }
 
@@ -29,14 +29,62 @@
 .main .swiper swiper swiper-item .wrap_item{
     margin-left:40rpx;
     border-radius:20rpx;
-    box-shadow:8rpx 8rpx 4rpx 4rpx #278d69;
+    box-shadow:8rpx 8rpx 4rpx 4rpx rgba(0,0,0,.4);
     overflow:hidden;
+}
+
+.main .swiper swiper swiper-item .wrap_item .bottom{
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.main .swiper swiper swiper-item .wrap_item .bottom .text_wrap{
+    width:302rpx;
+    height:302rpx;
+    margin:0 auto;
+    border:4rpx solid #585858;
+    border-radius:30rpx;
+    position:relative;
+    z-index:9999;
+}
+
+.main .swiper swiper swiper-item .wrap_item .bottom .text_wrap .phonogram{
+    display:block;
+    width:100%;
+    font:32rpx/84rpx '微软雅黑';
+    color:#000;
+    text-align:center;
+
+}
+
+.main .swiper swiper swiper-item .wrap_item .bottom .text_wrap .text_inf{
+    display:block;
+    width:100%;
+    font:140rpx/152rpx '微软雅黑';
+    color:#000;
+    text-align:center;
+
+}
+
+
+.main .swiper swiper swiper-item .wrap_item .bottom .text_wrap .dashed{
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
 }
 
 .main .swiper swiper  .end_card .wrap_item{
     height:828rpx;
     position:relative;
 }
+
+
 
 .main .swiper swiper  .end_card .wrap_item image{
     display:block;
@@ -82,7 +130,56 @@
 .main .swiper swiper .top{
     width:100%;
     height:428rpx;
+    position:relative;
 }
+
+.main .swiper swiper .top .poster{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.main .swiper swiper .top .poster .full_screen{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background:rgba(0,0,0,.4);
+}
+.main .swiper swiper .top .poster .tip_msg{
+    display:inline-block;
+    position:relative;
+    padding-left:44rpx;
+    font:30rpx/80rpx '微软雅黑';
+    color:#000;
+}
+.main .swiper swiper .top .poster .tip_msg image{
+    display:block;
+    width:28rpx;
+    height:28rpx;
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-14rpx;
+}
+
+.main .swiper swiper .top .poster image{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.main .swiper swiper .top video{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
 .main .swiper swiper .bottom{
     width:100%;
     height:400rpx;
@@ -122,4 +219,40 @@
     color:#000;
     margin:0 16rpx;
 
+}
+
+.video_list{
+    position:relative;
+}
+
+.video_list .video_tag{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:428rpx;
+    box-sizing:border-box;
+    padding:0 94rpx 0 56rpx;
+    z-index:9999;
+    
+}
+
+.video_list .video_tag_style{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:428rpx;
+    box-sizing:border-box;
+    padding:0 94rpx 0 94rpx;
+    z-index:9999;
+    
+}
+
+.video_list .video_tag video{
+    display:block;
+    width:100%;
+    height:100%;
+    border-radius:20rpx 20rpx 0 0;
+    overflow:hidden;
 }

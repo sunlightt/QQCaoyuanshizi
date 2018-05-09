@@ -1,66 +1,123 @@
-// pages/studied/index.js
+var app = getApp();
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+    data: {
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+        page: 1,
+        page_size: 5,
+        data_inf: null,
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+        last_item: false
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+    },
+    onLoad: function (options) {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+        var that = this;
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
+        that.get_data_inf();
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+
+    },
+    get_data_inf: function (page) {
+
+        var that = this;
+
+        if (!page) {
+
+            page = 1;
+
+        }
+
+        wx.showLoading({
+            title: '加载中'
+        });
+
+        wx.request({
+            url: app.globalData.url + 'index.php/api/Index/already_do',
+            data: {
+                uid: wx.getStorageSync('uid'),
+                page: page,
+                page_size: that.data.page_size
+            },
+            success: function (res) {
+
+                wx.hideLoading();
+
+                if (res.data.status == 200) {
+
+
+                    var data_inf = res.data.data.res;
+
+                    var old_data_inf = that.data.data_inf;
+
+
+                    if (page == 1) {
+
+                        that.setData({
+
+                            data_inf: data_inf,
+                            totalpage: res.data.data.totalpage
+
+                        });
+
+                    } else {
+
+                        for (var i = 0; i < data_inf.length; i++) {
+
+                            old_data_inf.push(data_inf[i]);
+
+                        }
+
+                        that.setData({
+
+                            data_inf: old_data_inf
+
+                        });
+
+                    }
+
+                    wx.hideLoading();
+
+                } else {
+
+                    wx.showToast({
+                        title: '获取数据失败',
+                        icon: 'loading',
+                        duration: 1000
+                    });
+
+                }
+            },
+            fail: function (res) {
+
+                wx.showToast({
+                    title: '获取数据失败',
+                    icon: 'loading',
+                    duration: 1000
+                });
+            }
+        })
+    },
+    onPullDownRefresh: function (e) {
+
+        var that = this;
+
+        wx.stopPullDownRefresh();
+
+        that.setData({
+            page: 1,
+            page_size: 5,
+            data_inf: null,
+            last_item: false
+
+        });
+
+        that.get_data_inf();
+
+    }
+
+
 })

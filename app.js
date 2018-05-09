@@ -21,15 +21,12 @@ App({
                         method: 'GET',
                         success: function (response) {
                             if (response.data.status == 200) {
-                                console.log(response.data);
 
-                                console.log(response.data.data.uid);
 
                                 that.globalData.openid = response.data.data.openid;
                                 wx.setStorageSync('openid', response.data.data.openid);
 
                                 wx.setStorageSync('uid', response.data.data.uid);
-                               
 
                                 wx.getUserInfo({
                                     success: function (respon) {
@@ -42,7 +39,7 @@ App({
                                                 avatar: respon.userInfo.avatarUrl
                                             },
                                             success: function (resdata) {
-                                                console.log(resdata);
+                                                
                                                 if (resdata.data.status != 200) {
 
                                                     wx.showToast({

@@ -11,12 +11,10 @@ Page({
        
         var that=this;
 
-        console.log(options);
-
-
         that.setData({
 
-            title:options.title
+            title:options.title,
+            id: options.id
 
         });
 
@@ -25,20 +23,20 @@ Page({
     story_video:function(e){
 
         wx.navigateTo({
-             url: '/pages/story/story_video/index'
+             url: '/pages/story/story_video/index?id='+this.data.id+'&type='+e.currentTarget.dataset.type
         })
          
     },
     story_read:function(e){
 
         wx.navigateTo({
-            url: '/pages/story/read_story/idnex'
+            url: '/pages/story/read_story/idnex?id=' + this.data.id + '&type=' + e.currentTarget.dataset.type
         })
     },
     read_rewords_pass:function(e){
 
         wx.navigateTo({
-            url: '/pages/story/read_rewords_pass/index'
+            url: '/pages/story/read_rewords/index?id=' + this.data.id + '&type=' + e.currentTarget.dataset.type
         })
 
     }

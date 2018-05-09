@@ -15,71 +15,108 @@
     <view class="robot">
         <view class="robot_title_wrap">
             <image src="http://p6v1wjzjz.bkt.clouddn.com/robot.png" mode="widthFix"></image>
-            <text>小朋友好厉害已经学习了\n6个故事汉子了</text>
+            <text>小朋友好厉害已经学习了\n{{data_inf.length}}个故事汉字了</text>
         </view>
     </view>
     <view class="main">
         <view class="line">
             <image src="/img/line.png" mode="widthFix"></image>
         </view>
-        <scroll-view scroll-y style="height:732rpx;">
+        <scroll-view scroll-y style="height:732rpx;" bindscrolltolower="down_loading">
+            <view class="list">
+                <view class="item {{index%4==1 ? 'bg1' : index%4==2 ? 'bg2' : index%4==3 ? 'bg3' : '' }}" wx:for="{{data_inf}}" data-title="{{item.title}}" data-id="{{item.id}}">
+                    <image src="{{item.curriculum.img}}" class="pro_img"></image>
+                    <view class="msg">
+                        <text class="title">{{item.curriculum.title}}</text>
+                        <text class="subtitle">{{item.curriculum.describe}}</text>
+                    </view>
+                    <!--徽标  -->
+                    <view class="tip_icon">
+                        <view class="free">
+                            <image src="/img/free.png" wx:if="{{item.curriculum.is_nofee==0 && item.is_finish_1==0 && item.is_finish_2==0 && item.is_finish_3==0}}"></image>
+                        </view>
+                        <view class="star" wx:if="{{item.is_finish_1!=0 || item.is_finish_2!=0 || item.is_finish_3!=0}}">
+                            <image src="http://p6v1wjzjz.bkt.clouddn.com/star2.png" wx:if="{{item.is_finish_1==1}}"></image>
+                            <image src="http://p6v1wjzjz.bkt.clouddn.com/star2.png" wx:if="{{item.is_finish_2==1}}"></image>
+                            <image src="http://p6v1wjzjz.bkt.clouddn.com/star2.png" wx:if="{{item.is_finish_3==1}}"></image>
+                            <!-- <image src="/img/star.png"  wx:for="{{item.process}}" wx:for-item="i"></image>
+                            <text>{{i.is_finish_1}}</text> -->
+                        </view>
+                        <!-- <view class="un_complete" wx:if="{{(item.is_nofee==1 || item.is_nofee==0) && item.process.length!=0 && item.process[0]==0 && item.process[1]==0 && item.process[2]==0}}">
+                            <image src="/img/status.png"></image>
+                        </view> -->
+                    </view>
+                </view>
+                <view class="item last_item" bindtap='story_dir' wx:if="{{last_item}}">
+                    <view class="more">
+                        <text class="more_inf">更多故事马上发生</text>
+                    </view>
+                </view>
+                <view class="item last_item tip" bindtap='story_dir' wx:if="{{data_inf.length==0}}">
+                    <view class="more">
+                        <text class="more_inf">您还未学习</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <!-- <scroll-view scroll-y style="height:732rpx;">
             <view class="list">
                 <view class="item" bindtap='story_dir'>
                     <image src="/img/img1.png" class="pro_img"></image>
                     <view class="msg">
                         <text class="title">汉字很有趣</text>
                         <text class="subtitle">这是一个全新的世界</text>
-                    </view>
+                    </view> -->
                     <!--徽标  -->
-                    <view class="tip_icon">
+                    <!-- <view class="tip_icon">
                         <view class="free">
                             <image src="/img/free.png"></image>
-                        </view>
+                        </view> -->
                         <!-- <view class="star" style="">
                               <image src="/img/star.png"></image>
                          </view>
                          <view class="un_complete">
                               <image src="/img/status.png"></image>
                          </view> -->
-                    </view>
+                    <!-- </view>
                 </view>
                 <view class="item" bindtap='story_dir'>
                     <image src="/img/img1.png" class="pro_img"></image>
                     <view class="msg">
                         <text class="title">1-晶晶找太阳</text>
                         <text class="subtitle">日-目-眼-阳</text>
-                    </view>
+                    </view> -->
                     <!--徽标  -->
-                    <view class="tip_icon">
+                    <!-- <view class="tip_icon"> -->
                         <!-- <view class="free">
                               <image src="/img/free.png"></image>
                          </view> -->
-                        <view class="star">
+                        <!-- <view class="star"> -->
                             <!-- <image src="/img/status.png" mode='widthFix'></image> -->
-                            <view class="star_wrap">
+                            <!-- <view class="star_wrap">
                                 <image src="/img/star2.png"></image>
                             </view>
-                        </view>
+                        </view> -->
                         <!-- <view class="un_complete">
                               <image src="/img/status.png"></image>
                          </view> -->
-                    </view>
+                    <!-- </view>
                 </view>
                 <view class="item" bindtap='story_dir'>
                     <image src="/img/img1.png" class="pro_img"></image>
                     <view class="msg">
                         <text class="title">2-动物乐园</text>
                         <text class="subtitle">猫-狗-猴-熊</text>
-                    </view>
+                    </view> -->
                     <!--徽标  -->
-                    <view class="tip_icon">
+                    <!-- <view class="tip_icon"> -->
                         <!-- <view class="free">
                               <image src="/img/free.png"></image>
                          </view> -->
                         <!-- <view class="star" style="">
                               <image src="/img/star.png"></image>
                          </view> -->
-                        <view class="un_complete">
+                        <!-- <view class="un_complete">
                             <image src="/img/status.png" mode='widthFix'></image>
                         </view>
                     </view>
@@ -89,21 +126,21 @@
                     <view class="msg">
                         <text class="title">2-动物乐园</text>
                         <text class="subtitle">猫-狗-猴-熊</text>
-                    </view>
+                    </view> -->
                     <!--徽标  -->
-                    <view class="tip_icon">
+                    <!-- <view class="tip_icon">
                         <view class="free">
                             <image src="/img/free.png"></image>
-                        </view>
+                        </view> -->
                         <!-- <view class="star" style="">
                               <image src="/img/star.png"></image>
                          </view>
                          <view class="un_complete">
                               <image src="/img/status.png"></image>
                          </view> -->
-                    </view>
+                    <!-- </view>
                 </view>
-                <view class="item last_item" bindtap='story_dir'>
+                <view class="item last_item" bindtap='story_dir'> -->
                     <!-- <image src="/img/img1.png" class="pro_img"></image>
                     <view class="msg">
                         <text class="title">汉字很有趣</text>
@@ -121,11 +158,11 @@
                               <image src="/img/status.png"></image>
                          </view> -->
                     <!-- </view> -->
-                    <view class="more" bindtap='story_dir'>
+                    <!-- <view class="more" bindtap='story_dir'>
                         <text class="more_inf">更多故事马上发生</text>
                     </view>
                 </view>
             </view>
-        </scroll-view>
+        </scroll-view> -->
     </view>
 </view>

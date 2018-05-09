@@ -6,15 +6,19 @@
         <view class="swiper">
             <view class="robot">
                 <image src="http://p6v1wjzjz.bkt.clouddn.com/robot1.png" mode="widthFix"></image>
-                <image src="/img/tip.png" mode='widthFix' class="tip_img"></image>
+                <image src="/img/tip.png" mode='widthFix' class="tip_img" wx:if="{{result_status_error}}"></image>
+                <image src="/img/tip1.png" mode='widthFix' class="tip_img" wx:if="{{result_status_right}}"></image>
             </view>
-            <swiper duration="1000">
-                <block>
+            <swiper duration="1000" bindchange="change_view" current="{{current_index}}">
+                <block wx:for="{{words_data}}">
                     <swiper-item>
                         <view class="wrap_item">
                              <view class="text">
-                                  <view class="phonogram">mu</view>
-                                  <view class="text_inf">木</view>
+                                  <view class="phonogram">{{item.pinyin}}</view>
+                                  <view class="text_inf">{{item.words}}</view>
+                             </view>
+                             <view class="dashed">
+                                  <image src="/img/dashed.png"></image>
                              </view>
                         </view>
                     </swiper-item>
@@ -23,7 +27,7 @@
         </view>
 
         <view class="record">
-             <view class="record_img">
+             <view class="record_img {{start_record==true ? 'start_record' : '' }}" bindlongpress="startRecord" bindtouchend='stopRecord'>
                  <image src="/img/record.png"></image>
                  <view class="circle circle1"></view>
                  <view class="circle circle2"></view>
@@ -34,4 +38,11 @@
              </view>
         </view>
     </view>
+</view>
+
+
+<!--提示弹框  -->
+<view class="toust_mark" wx:if="{{showToast}}">
+     <image src="http://p6v1wjzjz.bkt.clouddn.com/toast_tip_icon.png"></image>
+     <text>{{tip_msg}}</text>
 </view>
